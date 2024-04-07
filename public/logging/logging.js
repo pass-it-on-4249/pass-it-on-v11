@@ -226,36 +226,36 @@ return {
 //
 /////////////////////////////////////////////////////////////////////////////
 
-// Logging v1 submission function
+/ Logging v11 submission function
 // submits to the google form at this URL:
-// docs.google.com/forms/d/e/1FAIpQLSeVPQRcJ-QTRUg6iVzxVv-MSpezkJ-lfdEt4sdmDsVzCGG3lg/viewform?usp=sf_link
+// docs.google.com/forms/d/e/1FAIpQLSdc9EMN6HAH7QDNsBBHXL2w514owjoyG5aVGZuq9ayFGlj-IQ/viewform?usp=sf_link
 function sendNetworkLog(
-  uid,
-  timeMs,
-  userid,
-  eventname,
-  target,
-  info,
-  state,
-  log_version) {
-var formid = "e/1FAIpQLSeVPQRcJ-QTRUg6iVzxVv-MSpezkJ-lfdEt4sdmDsVzCGG3lg";
-var data = {
-  "entry.1613142373": uid,
-  "entry.1589787878": timeMs,
-  "entry.855609023": userid,
-  "entry.936741081": eventname,
-  "entry.404530990": target,
-  "entry.1907841667": info,
-  "entry.2121385294": state,
-  "entry.359647375": log_version
-};
-var params = [];
-for (var key in data) {
-  params.push(key + "=" + encodeURIComponent(data[key]));
-}
-// Submit the form using an image to avoid CORS warnings; warning may still happen, but log will be sent. Go check result in Google Form
-(new Image).src = "https://docs.google.com/forms/d/" + formid +
-   "/formResponse?" + params.join("&");
+    uid,
+    timeMs,
+    userid,
+    eventname,
+    target,
+    info,
+    state,
+    log_version) {
+  var formid = "e/1FAIpQLSdc9EMN6HAH7QDNsBBHXL2w514owjoyG5aVGZuq9ayFGlj-IQ";
+  var data = {
+    "entry.1613142373": uid,
+    "entry.1589787878": timeMs,
+    "entry.855609023": userid,
+    "entry.936741081": eventname,
+    "entry.404530990": target,
+    "entry.1907841667": info,
+    "entry.2121385294": state,
+    "entry.359647375": log_version
+  };
+  var params = [];
+  for (var key in data) {
+    params.push(key + "=" + encodeURIComponent(data[key]));
+  }
+  // Submit the form using an image to avoid CORS warnings; warning may still happen, but log will be sent. Go check result in Google Form
+  (new Image).src = "https://docs.google.com/forms/d/" + formid +
+     "/formResponse?" + params.join("&");
 }
 
 export default loggingjs.logEvent;
