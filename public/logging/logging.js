@@ -226,7 +226,7 @@ return {
 //
 /////////////////////////////////////////////////////////////////////////////
 
-/ Logging v11 submission function
+// Logging v11 submission function
 // submits to the google form at this URL:
 // docs.google.com/forms/d/e/1FAIpQLSdc9EMN6HAH7QDNsBBHXL2w514owjoyG5aVGZuq9ayFGlj-IQ/viewform?usp=sf_link
 function sendNetworkLog(
